@@ -33,7 +33,7 @@ function handleSubmit(e) {
         title: 'OK',
         message: value,
         backgroundColor: '#59A10D',
-        iconUrl: '../img/ok.svg',
+        iconUrl: './img/ok.svg',
         position: 'topRight',
       })
     )
