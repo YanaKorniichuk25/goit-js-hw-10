@@ -5,13 +5,55 @@
     <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snackbar</title>
+    <title>Promise generator</title>
     
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-3cfb730f.js"></script>
-    <script type="module" crossorigin src="/goit-js-hw-10/assets/vendor-77e16229.js"></script>
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-3cfb730f.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-77e16229.js">
     <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-7a007824.css">
   </head>
   <body>
     <a href="./index.html"></a>
+    <main class="wrapper">
+      <form class="form">
+        <label class="form-label">
+          Delay (ms)
+          <input
+            class="input input-number"
+            type="number"
+            name="delay"
+            required
+          />
+        </label>
+
+        <fieldset class="form-fieldset">
+          <legend>State</legend>
+          <label class="form-label-radio"
+            >Fulfilled
+            <input
+              class="form-radio"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="form-label-radio"
+            >Rejected
+            <input
+              class="form-radio"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+
+        <button class="btn btn-form" type="submit">Create notification</button>
+      </form>
+    </main>
   </body>
 </html>
