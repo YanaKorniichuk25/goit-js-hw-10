@@ -2,54 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promise generator</title>
-    <script type="module" src="./js/2-snackbar.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/2-snackbar.css" />
+    <title>Document</title>
   </head>
   <body>
-    <a href="./index.html"></a>
-    <main class="wrapper">
-      <form class="form">
-        <label class="form-label">
-          Delay (ms)
-          <input
-            class="input input-number"
-            type="number"
-            name="delay"
-            required
-          />
+    <form class="form">
+      <label>
+        Delay (ms)
+        <input type="number" name="delay" class="input-delay" required />
+      </label>
+
+      <fieldset class="wrapper">
+        <legend>State</legend>
+        <label>
+          <input type="radio" name="state" value="fulfilled" required />
+          Fulfilled
         </label>
+        <label>
+          <input type="radio" name="state" value="rejected" required />
+          Rejected
+        </label>
+      </fieldset>
 
-        <fieldset class="form-fieldset">
-          <legend>State</legend>
-          <label class="form-label-radio"
-            >Fulfilled
-            <input
-              class="form-radio"
-              type="radio"
-              name="state"
-              value="fulfilled"
-              required
-            />
-            <span class="checkmark"></span>
-          </label>
-          <label class="form-label-radio"
-            >Rejected
-            <input
-              class="form-radio"
-              type="radio"
-              name="state"
-              value="rejected"
-              required
-            />
-            <span class="checkmark"></span>
-          </label>
-        </fieldset>
-
-        <button class="btn btn-form" type="submit">Create notification</button>
-      </form>
-    </main>
+      <button type="submit" class="button">Create notification</button>
+    </form>
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
